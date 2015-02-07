@@ -7,14 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A989CB3192D1ACCE0D40DF53 /* libPods-ShareNear.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE9B19C4D2EDDF07D013F15 /* libPods-ShareNear.a */; };
 		F45784831A81AF8000EE6B13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784821A81AF8000EE6B13 /* main.m */; };
 		F45784861A81AF8000EE6B13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784851A81AF8000EE6B13 /* AppDelegate.m */; };
 		F45784891A81AF8000EE6B13 /* ShareNear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F45784871A81AF8000EE6B13 /* ShareNear.xcdatamodeld */; };
-		F457848C1A81AF8000EE6B13 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F457848B1A81AF8000EE6B13 /* ViewController.m */; };
 		F457848F1A81AF8000EE6B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F457848D1A81AF8000EE6B13 /* Main.storyboard */; };
 		F45784911A81AF8000EE6B13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45784901A81AF8000EE6B13 /* Images.xcassets */; };
 		F45784941A81AF8000EE6B13 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45784921A81AF8000EE6B13 /* LaunchScreen.xib */; };
 		F45784A01A81AF8000EE6B13 /* ShareNearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F457849F1A81AF8000EE6B13 /* ShareNearTests.m */; };
+		F45784BA1A81E6D900EE6B13 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45784AF1A81E6D900EE6B13 /* RAMBounceAnimation.swift */; };
+		F45784BB1A81E6D900EE6B13 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45784B11A81E6D900EE6B13 /* RAMFrameItemAnimation.swift */; };
+		F45784BC1A81E6D900EE6B13 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45784B31A81E6D900EE6B13 /* RAMFumeAnimation.swift */; };
+		F45784BD1A81E6D900EE6B13 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45784B51A81E6D900EE6B13 /* RAMRotationAnimation.swift */; };
+		F45784BE1A81E6D900EE6B13 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45784B71A81E6D900EE6B13 /* RAMTransitionItemAnimation.swift */; };
+		F45784BF1A81E6D900EE6B13 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45784B81A81E6D900EE6B13 /* RAMAnimatedTabBarController.swift */; };
+		F45784C01A81E6D900EE6B13 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45784B91A81E6D900EE6B13 /* RAMItemAnimationProtocol.swift */; };
+		F45784C31A81EBDE00EE6B13 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784C21A81EBDE00EE6B13 /* LoginViewController.m */; };
+		F45784C71A82750C00EE6B13 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784C61A82750C00EE6B13 /* DiscoverViewController.m */; };
+		F45784CF1A82BF3700EE6B13 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F45784CA1A82BF3700EE6B13 /* FontAwesome.ttf */; };
+		F45784D01A82BF3700EE6B13 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784CC1A82BF3700EE6B13 /* NSString+FontAwesome.m */; };
+		F45784D11A82BF3700EE6B13 /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784CE1A82BF3700EE6B13 /* UIButton+Bootstrap.m */; };
+		F45784D51A82C0F500EE6B13 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784D41A82C0F500EE6B13 /* ShareViewController.m */; };
+		F45784D81A82CA9D00EE6B13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784D71A82CA9D00EE6B13 /* CoreGraphics.framework */; };
+		F45784DB1A82CAEF00EE6B13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784DA1A82CAEF00EE6B13 /* Foundation.framework */; };
+		F45784DD1A82CAF900EE6B13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784DC1A82CAF900EE6B13 /* UIKit.framework */; };
+		F45784DF1A82CB1F00EE6B13 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784DE1A82CB1F00EE6B13 /* QuartzCore.framework */; };
+		F45784E31A83D4BD00EE6B13 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784E21A83D4BD00EE6B13 /* FacebookSDK.framework */; };
+		F45784E61A83D6C500EE6B13 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784E41A83D6C500EE6B13 /* Bolts.framework */; };
+		F45784E71A83D6C500EE6B13 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784E51A83D6C500EE6B13 /* Parse.framework */; };
+		F45784E91A83D6F700EE6B13 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784E81A83D6F700EE6B13 /* Accounts.framework */; };
+		F45784EB1A83D70000EE6B13 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784EA1A83D70000EE6B13 /* AudioToolbox.framework */; };
+		F45784ED1A83D70700EE6B13 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784EC1A83D70700EE6B13 /* CFNetwork.framework */; };
+		F45784EF1A83D71A00EE6B13 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784EE1A83D71A00EE6B13 /* CoreLocation.framework */; };
+		F45784F11A83D72A00EE6B13 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784F01A83D72A00EE6B13 /* MobileCoreServices.framework */; };
+		F45784F31A83D73A00EE6B13 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784F21A83D73A00EE6B13 /* Security.framework */; };
+		F45784F51A83D74300EE6B13 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784F41A83D74300EE6B13 /* Social.framework */; };
+		F45784F71A83D74B00EE6B13 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784F61A83D74B00EE6B13 /* StoreKit.framework */; };
+		F45784F91A83D75600EE6B13 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784F81A83D75600EE6B13 /* SystemConfiguration.framework */; };
+		F45784FB1A83D76300EE6B13 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784FA1A83D76300EE6B13 /* libz.dylib */; };
+		F45784FD1A83D76D00EE6B13 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784FC1A83D76D00EE6B13 /* libsqlite3.dylib */; };
+		F45785011A83DC3700EE6B13 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784FE1A83DC3700EE6B13 /* ParseCrashReporting.framework */; };
+		F45785021A83DC3700EE6B13 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784FF1A83DC3700EE6B13 /* ParseFacebookUtils.framework */; };
+		F45785031A83DC3700EE6B13 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45785001A83DC3700EE6B13 /* ParseUI.framework */; };
+		F457850D1A840EA500EE6B13 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F457850C1A840EA500EE6B13 /* Constants.m */; };
+		F45785101A843F0100EE6B13 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F457850F1A843F0100EE6B13 /* ProfileViewController.m */; };
+		F47BF34B1A848CC800EB6FEA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF34A1A848CC800EB6FEA /* SettingsViewController.m */; };
+		F47BF34E1A848EA400EB6FEA /* MatchUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF34D1A848EA400EB6FEA /* MatchUpViewController.m */; };
+		F47BF3511A84957D00EB6FEA /* MatchUpSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF3501A84957D00EB6FEA /* MatchUpSettingsViewController.m */; };
+		F47BF3541A85066600EB6FEA /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF3531A85066600EB6FEA /* InfoViewController.m */; };
+		F47BF3591A8521C200EB6FEA /* TestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF3581A8521C200EB6FEA /* TestUser.m */; };
+		F47BF35C1A85224000EB6FEA /* bonobo-congo-ziegler_68751_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47BF35B1A85224000EB6FEA /* bonobo-congo-ziegler_68751_990x742.jpg */; };
+		F47BF35E1A85237E00EB6FEA /* picture-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47BF35D1A85237E00EB6FEA /* picture-wallpaper.jpg */; };
+		F47BF3621A857A7A00EB6FEA /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF3611A857A7A00EB6FEA /* MatchViewController.m */; };
+		F47BF3651A857D1700EB6FEA /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF3641A857D1700EB6FEA /* MatchesViewController.m */; };
+		F47BF36B1A8580FB00EB6FEA /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF36A1A8580FB00EB6FEA /* ChatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,20 +74,84 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BE9B19C4D2EDDF07D013F15 /* libPods-ShareNear.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShareNear.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7003B71F8A6E24EE47A208D5 /* Pods-ShareNear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareNear.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareNear/Pods-ShareNear.release.xcconfig"; sourceTree = "<group>"; };
+		8D4DCDF9BCFBC3F4504B1839 /* Pods-ShareNear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareNear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareNear/Pods-ShareNear.debug.xcconfig"; sourceTree = "<group>"; };
 		F457847D1A81AF8000EE6B13 /* ShareNear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareNear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45784811A81AF8000EE6B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F45784821A81AF8000EE6B13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F45784841A81AF8000EE6B13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F45784851A81AF8000EE6B13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F45784881A81AF8000EE6B13 /* ShareNear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShareNear.xcdatamodel; sourceTree = "<group>"; };
-		F457848A1A81AF8000EE6B13 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F457848B1A81AF8000EE6B13 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F457848E1A81AF8000EE6B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F45784901A81AF8000EE6B13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F45784931A81AF8000EE6B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F45784991A81AF8000EE6B13 /* ShareNearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareNearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F457849E1A81AF8000EE6B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F457849F1A81AF8000EE6B13 /* ShareNearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareNearTests.m; sourceTree = "<group>"; };
+		F45784A91A81AFA100EE6B13 /* ShareNear-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShareNear-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		F45784AF1A81E6D900EE6B13 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		F45784B11A81E6D900EE6B13 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		F45784B31A81E6D900EE6B13 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		F45784B51A81E6D900EE6B13 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		F45784B71A81E6D900EE6B13 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
+		F45784B81A81E6D900EE6B13 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		F45784B91A81E6D900EE6B13 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		F45784C11A81EBDE00EE6B13 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F45784C21A81EBDE00EE6B13 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F45784C51A82750C00EE6B13 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		F45784C61A82750C00EE6B13 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		F45784CA1A82BF3700EE6B13 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		F45784CB1A82BF3700EE6B13 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		F45784CC1A82BF3700EE6B13 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		F45784CD1A82BF3700EE6B13 /* UIButton+Bootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Bootstrap.h"; sourceTree = "<group>"; };
+		F45784CE1A82BF3700EE6B13 /* UIButton+Bootstrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Bootstrap.m"; sourceTree = "<group>"; };
+		F45784D31A82C0F500EE6B13 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		F45784D41A82C0F500EE6B13 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		F45784D71A82CA9D00EE6B13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F45784DA1A82CAEF00EE6B13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F45784DC1A82CAF900EE6B13 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F45784DE1A82CB1F00EE6B13 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F45784E21A83D4BD00EE6B13 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		F45784E41A83D6C500EE6B13 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F45784E51A83D6C500EE6B13 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F45784E81A83D6F700EE6B13 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		F45784EA1A83D70000EE6B13 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F45784EC1A83D70700EE6B13 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F45784EE1A83D71A00EE6B13 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F45784F01A83D72A00EE6B13 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F45784F21A83D73A00EE6B13 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F45784F41A83D74300EE6B13 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F45784F61A83D74B00EE6B13 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F45784F81A83D75600EE6B13 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F45784FA1A83D76300EE6B13 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F45784FC1A83D76D00EE6B13 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F45784FE1A83DC3700EE6B13 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		F45784FF1A83DC3700EE6B13 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		F45785001A83DC3700EE6B13 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		F45785071A83E61500EE6B13 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		F457850B1A840EA500EE6B13 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
+		F457850C1A840EA500EE6B13 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = ../Constants.m; sourceTree = "<group>"; };
+		F457850E1A843F0100EE6B13 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ShareNear/ProfileViewController.h; sourceTree = "<group>"; };
+		F457850F1A843F0100EE6B13 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ShareNear/ProfileViewController.m; sourceTree = "<group>"; };
+		F47BF3491A848CC800EB6FEA /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = ShareNear/SettingsViewController.h; sourceTree = "<group>"; };
+		F47BF34A1A848CC800EB6FEA /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = ShareNear/SettingsViewController.m; sourceTree = "<group>"; };
+		F47BF34C1A848EA400EB6FEA /* MatchUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchUpViewController.h; sourceTree = "<group>"; };
+		F47BF34D1A848EA400EB6FEA /* MatchUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchUpViewController.m; sourceTree = "<group>"; };
+		F47BF34F1A84957D00EB6FEA /* MatchUpSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchUpSettingsViewController.h; sourceTree = "<group>"; };
+		F47BF3501A84957D00EB6FEA /* MatchUpSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchUpSettingsViewController.m; sourceTree = "<group>"; };
+		F47BF3521A85066600EB6FEA /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		F47BF3531A85066600EB6FEA /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		F47BF3571A8521C200EB6FEA /* TestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUser.h; sourceTree = "<group>"; };
+		F47BF3581A8521C200EB6FEA /* TestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUser.m; sourceTree = "<group>"; };
+		F47BF35B1A85224000EB6FEA /* bonobo-congo-ziegler_68751_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bonobo-congo-ziegler_68751_990x742.jpg"; sourceTree = "<group>"; };
+		F47BF35D1A85237E00EB6FEA /* picture-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "picture-wallpaper.jpg"; sourceTree = "<group>"; };
+		F47BF3601A857A7A00EB6FEA /* MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
+		F47BF3611A857A7A00EB6FEA /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
+		F47BF3631A857D1700EB6FEA /* MatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchesViewController.h; sourceTree = "<group>"; };
+		F47BF3641A857D1700EB6FEA /* MatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchesViewController.m; sourceTree = "<group>"; };
+		F47BF3691A8580FB00EB6FEA /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		F47BF36A1A8580FB00EB6FEA /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +159,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45784FD1A83D76D00EE6B13 /* libsqlite3.dylib in Frameworks */,
+				F45784FB1A83D76300EE6B13 /* libz.dylib in Frameworks */,
+				F45784F91A83D75600EE6B13 /* SystemConfiguration.framework in Frameworks */,
+				F45784F71A83D74B00EE6B13 /* StoreKit.framework in Frameworks */,
+				F45784F51A83D74300EE6B13 /* Social.framework in Frameworks */,
+				F45784F31A83D73A00EE6B13 /* Security.framework in Frameworks */,
+				F45784DF1A82CB1F00EE6B13 /* QuartzCore.framework in Frameworks */,
+				F45784F11A83D72A00EE6B13 /* MobileCoreServices.framework in Frameworks */,
+				F45784EF1A83D71A00EE6B13 /* CoreLocation.framework in Frameworks */,
+				F45785031A83DC3700EE6B13 /* ParseUI.framework in Frameworks */,
+				F45784D81A82CA9D00EE6B13 /* CoreGraphics.framework in Frameworks */,
+				F45785011A83DC3700EE6B13 /* ParseCrashReporting.framework in Frameworks */,
+				F45784ED1A83D70700EE6B13 /* CFNetwork.framework in Frameworks */,
+				F45784EB1A83D70000EE6B13 /* AudioToolbox.framework in Frameworks */,
+				F45784E91A83D6F700EE6B13 /* Accounts.framework in Frameworks */,
+				F45784E31A83D4BD00EE6B13 /* FacebookSDK.framework in Frameworks */,
+				F45784DD1A82CAF900EE6B13 /* UIKit.framework in Frameworks */,
+				F45784E71A83D6C500EE6B13 /* Parse.framework in Frameworks */,
+				F45784E61A83D6C500EE6B13 /* Bolts.framework in Frameworks */,
+				F45785021A83DC3700EE6B13 /* ParseFacebookUtils.framework in Frameworks */,
+				F45784DB1A82CAEF00EE6B13 /* Foundation.framework in Frameworks */,
+				A989CB3192D1ACCE0D40DF53 /* libPods-ShareNear.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +194,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B23913F066EC6012F244388C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D4DCDF9BCFBC3F4504B1839 /* Pods-ShareNear.debug.xcconfig */,
+				7003B71F8A6E24EE47A208D5 /* Pods-ShareNear.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F45784741A81AF8000EE6B13 = {
 			isa = PBXGroup;
 			children = (
+				F47BF35A1A85224000EB6FEA /* Assets */,
+				F45784D91A82CAC800EE6B13 /* Frameworks */,
 				F457847F1A81AF8000EE6B13 /* ShareNear */,
 				F457849C1A81AF8000EE6B13 /* ShareNearTests */,
 				F457847E1A81AF8000EE6B13 /* Products */,
+				B23913F066EC6012F244388C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,10 +227,16 @@
 		F457847F1A81AF8000EE6B13 /* ShareNear */ = {
 			isa = PBXGroup;
 			children = (
+				F47BF3561A85219900EB6FEA /* CreateTestUsers */,
+				F45784C91A82BEEF00EE6B13 /* UIButtonBootstrap */,
+				F45784AC1A81E6D900EE6B13 /* RAMAnimatedTabBarController */,
+				F45784C41A81EBE400EE6B13 /* Login */,
+				F45784C81A82751500EE6B13 /* Discover */,
+				F45784D61A82C0FB00EE6B13 /* Share */,
+				F45785111A843F0A00EE6B13 /* Settings */,
+				F47BF3481A8478AD00EB6FEA /* Chat */,
 				F45784841A81AF8000EE6B13 /* AppDelegate.h */,
 				F45784851A81AF8000EE6B13 /* AppDelegate.m */,
-				F457848A1A81AF8000EE6B13 /* ViewController.h */,
-				F457848B1A81AF8000EE6B13 /* ViewController.m */,
 				F457848D1A81AF8000EE6B13 /* Main.storyboard */,
 				F45784901A81AF8000EE6B13 /* Images.xcassets */,
 				F45784921A81AF8000EE6B13 /* LaunchScreen.xib */,
@@ -99,6 +249,10 @@
 		F45784801A81AF8000EE6B13 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F457850B1A840EA500EE6B13 /* Constants.h */,
+				F457850C1A840EA500EE6B13 /* Constants.m */,
+				F45785071A83E61500EE6B13 /* PrefixHeader.pch */,
+				F45784A91A81AFA100EE6B13 /* ShareNear-Bridging-Header.h */,
 				F45784811A81AF8000EE6B13 /* Info.plist */,
 				F45784821A81AF8000EE6B13 /* main.m */,
 			);
@@ -122,6 +276,195 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F45784AC1A81E6D900EE6B13 /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F45784AD1A81E6D900EE6B13 /* Animations */,
+				F45784B81A81E6D900EE6B13 /* RAMAnimatedTabBarController.swift */,
+				F45784B91A81E6D900EE6B13 /* RAMItemAnimationProtocol.swift */,
+			);
+			path = RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		F45784AD1A81E6D900EE6B13 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				F45784AE1A81E6D900EE6B13 /* BounceAnimation */,
+				F45784B01A81E6D900EE6B13 /* FrameAnimation */,
+				F45784B21A81E6D900EE6B13 /* FumeAnimation */,
+				F45784B41A81E6D900EE6B13 /* RotationAnimation */,
+				F45784B61A81E6D900EE6B13 /* TransitionAniamtions */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		F45784AE1A81E6D900EE6B13 /* BounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F45784AF1A81E6D900EE6B13 /* RAMBounceAnimation.swift */,
+			);
+			path = BounceAnimation;
+			sourceTree = "<group>";
+		};
+		F45784B01A81E6D900EE6B13 /* FrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F45784B11A81E6D900EE6B13 /* RAMFrameItemAnimation.swift */,
+			);
+			path = FrameAnimation;
+			sourceTree = "<group>";
+		};
+		F45784B21A81E6D900EE6B13 /* FumeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F45784B31A81E6D900EE6B13 /* RAMFumeAnimation.swift */,
+			);
+			path = FumeAnimation;
+			sourceTree = "<group>";
+		};
+		F45784B41A81E6D900EE6B13 /* RotationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F45784B51A81E6D900EE6B13 /* RAMRotationAnimation.swift */,
+			);
+			path = RotationAnimation;
+			sourceTree = "<group>";
+		};
+		F45784B61A81E6D900EE6B13 /* TransitionAniamtions */ = {
+			isa = PBXGroup;
+			children = (
+				F45784B71A81E6D900EE6B13 /* RAMTransitionItemAnimation.swift */,
+			);
+			path = TransitionAniamtions;
+			sourceTree = "<group>";
+		};
+		F45784C41A81EBE400EE6B13 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F45784C11A81EBDE00EE6B13 /* LoginViewController.h */,
+				F45784C21A81EBDE00EE6B13 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		F45784C81A82751500EE6B13 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				F47BF35F1A852A6F00EB6FEA /* MatchUp */,
+				F45784C51A82750C00EE6B13 /* DiscoverViewController.h */,
+				F45784C61A82750C00EE6B13 /* DiscoverViewController.m */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		F45784C91A82BEEF00EE6B13 /* UIButtonBootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				F45784CA1A82BF3700EE6B13 /* FontAwesome.ttf */,
+				F45784CB1A82BF3700EE6B13 /* NSString+FontAwesome.h */,
+				F45784CC1A82BF3700EE6B13 /* NSString+FontAwesome.m */,
+				F45784CD1A82BF3700EE6B13 /* UIButton+Bootstrap.h */,
+				F45784CE1A82BF3700EE6B13 /* UIButton+Bootstrap.m */,
+			);
+			name = UIButtonBootstrap;
+			sourceTree = "<group>";
+		};
+		F45784D61A82C0FB00EE6B13 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				F45784D31A82C0F500EE6B13 /* ShareViewController.h */,
+				F45784D41A82C0F500EE6B13 /* ShareViewController.m */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
+		F45784D91A82CAC800EE6B13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F45784FE1A83DC3700EE6B13 /* ParseCrashReporting.framework */,
+				F45784FF1A83DC3700EE6B13 /* ParseFacebookUtils.framework */,
+				F45785001A83DC3700EE6B13 /* ParseUI.framework */,
+				F45784FC1A83D76D00EE6B13 /* libsqlite3.dylib */,
+				F45784FA1A83D76300EE6B13 /* libz.dylib */,
+				F45784F81A83D75600EE6B13 /* SystemConfiguration.framework */,
+				F45784F61A83D74B00EE6B13 /* StoreKit.framework */,
+				F45784F41A83D74300EE6B13 /* Social.framework */,
+				F45784F21A83D73A00EE6B13 /* Security.framework */,
+				F45784F01A83D72A00EE6B13 /* MobileCoreServices.framework */,
+				F45784EE1A83D71A00EE6B13 /* CoreLocation.framework */,
+				F45784EC1A83D70700EE6B13 /* CFNetwork.framework */,
+				F45784EA1A83D70000EE6B13 /* AudioToolbox.framework */,
+				F45784E81A83D6F700EE6B13 /* Accounts.framework */,
+				F45784E41A83D6C500EE6B13 /* Bolts.framework */,
+				F45784E51A83D6C500EE6B13 /* Parse.framework */,
+				F45784E21A83D4BD00EE6B13 /* FacebookSDK.framework */,
+				F45784DE1A82CB1F00EE6B13 /* QuartzCore.framework */,
+				F45784DC1A82CAF900EE6B13 /* UIKit.framework */,
+				F45784DA1A82CAEF00EE6B13 /* Foundation.framework */,
+				F45784D71A82CA9D00EE6B13 /* CoreGraphics.framework */,
+				3BE9B19C4D2EDDF07D013F15 /* libPods-ShareNear.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F45785111A843F0A00EE6B13 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F47BF3491A848CC800EB6FEA /* SettingsViewController.h */,
+				F47BF34A1A848CC800EB6FEA /* SettingsViewController.m */,
+				F457850E1A843F0100EE6B13 /* ProfileViewController.h */,
+				F457850F1A843F0100EE6B13 /* ProfileViewController.m */,
+			);
+			name = Settings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F47BF3481A8478AD00EB6FEA /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				F47BF3691A8580FB00EB6FEA /* ChatViewController.h */,
+				F47BF36A1A8580FB00EB6FEA /* ChatViewController.m */,
+			);
+			name = Chat;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F47BF3561A85219900EB6FEA /* CreateTestUsers */ = {
+			isa = PBXGroup;
+			children = (
+				F47BF3571A8521C200EB6FEA /* TestUser.h */,
+				F47BF3581A8521C200EB6FEA /* TestUser.m */,
+			);
+			name = CreateTestUsers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F47BF35A1A85224000EB6FEA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F47BF35D1A85237E00EB6FEA /* picture-wallpaper.jpg */,
+				F47BF35B1A85224000EB6FEA /* bonobo-congo-ziegler_68751_990x742.jpg */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F47BF35F1A852A6F00EB6FEA /* MatchUp */ = {
+			isa = PBXGroup;
+			children = (
+				F47BF3601A857A7A00EB6FEA /* MatchViewController.h */,
+				F47BF3611A857A7A00EB6FEA /* MatchViewController.m */,
+				F47BF3631A857D1700EB6FEA /* MatchesViewController.h */,
+				F47BF3641A857D1700EB6FEA /* MatchesViewController.m */,
+				F47BF34C1A848EA400EB6FEA /* MatchUpViewController.h */,
+				F47BF34D1A848EA400EB6FEA /* MatchUpViewController.m */,
+				F47BF34F1A84957D00EB6FEA /* MatchUpSettingsViewController.h */,
+				F47BF3501A84957D00EB6FEA /* MatchUpSettingsViewController.m */,
+				F47BF3521A85066600EB6FEA /* InfoViewController.h */,
+				F47BF3531A85066600EB6FEA /* InfoViewController.m */,
+			);
+			name = MatchUp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +472,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F45784A31A81AF8000EE6B13 /* Build configuration list for PBXNativeTarget "ShareNear" */;
 			buildPhases = (
+				03A52B8D1C9739C8AADC5121 /* Check Pods Manifest.lock */,
 				F45784791A81AF8000EE6B13 /* Sources */,
 				F457847A1A81AF8000EE6B13 /* Frameworks */,
 				F457847B1A81AF8000EE6B13 /* Resources */,
+				0E5C98B7A440085016D38509 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +516,7 @@
 				TargetAttributes = {
 					F457847C1A81AF8000EE6B13 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = NN6D3E38G9;
 					};
 					F45784981A81AF8000EE6B13 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -204,7 +550,10 @@
 			files = (
 				F457848F1A81AF8000EE6B13 /* Main.storyboard in Resources */,
 				F45784941A81AF8000EE6B13 /* LaunchScreen.xib in Resources */,
+				F47BF35C1A85224000EB6FEA /* bonobo-congo-ziegler_68751_990x742.jpg in Resources */,
 				F45784911A81AF8000EE6B13 /* Images.xcassets in Resources */,
+				F45784CF1A82BF3700EE6B13 /* FontAwesome.ttf in Resources */,
+				F47BF35E1A85237E00EB6FEA /* picture-wallpaper.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,15 +566,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03A52B8D1C9739C8AADC5121 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0E5C98B7A440085016D38509 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareNear/Pods-ShareNear-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F45784791A81AF8000EE6B13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F45784861A81AF8000EE6B13 /* AppDelegate.m in Sources */,
+				F45784C71A82750C00EE6B13 /* DiscoverViewController.m in Sources */,
+				F47BF3541A85066600EB6FEA /* InfoViewController.m in Sources */,
+				F45784D11A82BF3700EE6B13 /* UIButton+Bootstrap.m in Sources */,
+				F457850D1A840EA500EE6B13 /* Constants.m in Sources */,
+				F45784BF1A81E6D900EE6B13 /* RAMAnimatedTabBarController.swift in Sources */,
 				F45784831A81AF8000EE6B13 /* main.m in Sources */,
-				F457848C1A81AF8000EE6B13 /* ViewController.m in Sources */,
+				F45784BE1A81E6D900EE6B13 /* RAMTransitionItemAnimation.swift in Sources */,
+				F47BF34E1A848EA400EB6FEA /* MatchUpViewController.m in Sources */,
+				F45784C01A81E6D900EE6B13 /* RAMItemAnimationProtocol.swift in Sources */,
+				F47BF3511A84957D00EB6FEA /* MatchUpSettingsViewController.m in Sources */,
+				F45784D01A82BF3700EE6B13 /* NSString+FontAwesome.m in Sources */,
+				F45785101A843F0100EE6B13 /* ProfileViewController.m in Sources */,
+				F47BF34B1A848CC800EB6FEA /* SettingsViewController.m in Sources */,
 				F45784891A81AF8000EE6B13 /* ShareNear.xcdatamodeld in Sources */,
+				F45784BD1A81E6D900EE6B13 /* RAMRotationAnimation.swift in Sources */,
+				F45784BB1A81E6D900EE6B13 /* RAMFrameItemAnimation.swift in Sources */,
+				F45784BC1A81E6D900EE6B13 /* RAMFumeAnimation.swift in Sources */,
+				F47BF3651A857D1700EB6FEA /* MatchesViewController.m in Sources */,
+				F45784C31A81EBDE00EE6B13 /* LoginViewController.m in Sources */,
+				F47BF3621A857A7A00EB6FEA /* MatchViewController.m in Sources */,
+				F47BF3591A8521C200EB6FEA /* TestUser.m in Sources */,
+				F47BF36B1A8580FB00EB6FEA /* ChatViewController.m in Sources */,
+				F45784D51A82C0F500EE6B13 /* ShareViewController.m in Sources */,
+				F45784BA1A81E6D900EE6B13 /* RAMBounceAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,21 +748,46 @@
 		};
 		F45784A41A81AF8000EE6B13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D4DCDF9BCFBC3F4504B1839 /* Pods-ShareNear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/KE-MAC/Documents/FacebookSDK",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = ShareNear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShareNear-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		F45784A51A81AF8000EE6B13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7003B71F8A6E24EE47A208D5 /* Pods-ShareNear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/KE-MAC/Documents/FacebookSDK",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = ShareNear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShareNear-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -416,6 +844,7 @@
 				F45784A51A81AF8000EE6B13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F45784A61A81AF8000EE6B13 /* Build configuration list for PBXNativeTarget "ShareNearTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +853,7 @@
 				F45784A81A81AF8000EE6B13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
