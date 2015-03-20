@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "ShareNear": {
+            "applicationId": "lvOj2e1kOirLEkVitrxn6jfUPhk4AHX0J4XJCj9a", 
+            "masterKey": "SJmzrKX2TkIV6iZSJeEXCPi1Fjy03AT9quyEGYb1"
+        }, 
+        "_default": {
+            "link": "ShareNear"
+        }
+    }
+}

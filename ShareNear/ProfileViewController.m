@@ -8,7 +8,7 @@
 
 #import "ProfileViewController.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *profilePictureImageView;
 @property (weak, nonatomic) IBOutlet UITextView *tagLineTextView;
 
@@ -20,7 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveButtonPressed)];
+    self.tagLineTextView.delegate = self;
+    self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1.0];
+    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveButtonPressed)];
     
     PFQuery *query = [PFQuery queryWithClassName:kPhotoClassKey];
     [query whereKey:kPhotoUserKey equalTo:[PFUser currentUser]];
@@ -48,11 +51,27 @@
 
 #pragma mark - IBActions
 
--(void)saveButtonPressed{
+/*-(void)saveButtonPressed{
     [[PFUser currentUser] setObject:self.tagLineTextView.text forKey:kUserTagLineKey];
     [[PFUser currentUser] saveInBackground];
     [self.navigationController popViewControllerAnimated:YES];
+}*/
+
+
+#pragma mark - textViewDelegate
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if ([text isEqualToString:@"\n"]){
+        [self.tagLineTextView resignFirstResponder];
+        [[PFUser currentUser] setObject:self.tagLineTextView.text forKey:kUserTagLineKey];
+        [[PFUser currentUser] saveInBackground];
+        [self.navigationController popViewControllerAnimated:YES];
+        return NO;
+    }
+    else {
+        return YES;
+    }
 }
+
 
 /*
 #pragma mark - Navigation

@@ -10,13 +10,14 @@
 #import "TestUser.h"
 #import "InfoViewController.h"
 #import "MatchViewController.h"
+#import "TransitionAnimator.h"
 
-@interface MatchUpViewController () <MatchViewControllerDelegate>
+@interface MatchUpViewController () <MatchViewControllerDelegate, InfoViewControllerDelegate, UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tagLineLabel;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
@@ -26,6 +27,10 @@
 @property (strong, nonatomic) NSArray *photos;
 @property (strong, nonatomic) PFObject *photo;
 @property (strong, nonatomic) NSMutableArray *activities;
+
+@property (weak, nonatomic) IBOutlet UIView *labelContainerView;
+@property (weak, nonatomic) IBOutlet UIView *buttonContainerView;
+
 
 @property (nonatomic) int currentPhotoIndex;
 @property (nonatomic) BOOL isLikedByCurrentUser;
@@ -39,10 +44,51 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // set right bar item
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Chat" style:UIBarButtonItemStylePlain target:self action:@selector(chatButtonPressed)];
+    [self setupNavigationBar];
+    [self setupViews];
+    
+    
+}
+
+-(void)setupNavigationBar{
+    // set right bar items
+    UIBarButtonItem *chatBarItem = [[UIBarButtonItem alloc]initWithTitle:@"Chat" style:UIBarButtonItemStylePlain target:self action:@selector(chatButtonPressed)];
+    UIBarButtonItem *settingsBarItem = [[UIBarButtonItem alloc]initWithTitle:@"Setting" style:UIBarButtonItemStylePlain target:self action:@selector(settingsButtonPressed)];
+    
+    chatBarItem.image = [UIImage imageNamed:@"chat_icon"];
+    settingsBarItem.image = [UIImage imageNamed:@"settings_barItem_icon"];
+    self.navigationItem.rightBarButtonItems = @[chatBarItem, settingsBarItem];
+    
+    self.navigationItem.title = @"Match Up";
+}
+
+-(void)setupViews{
+    
+    self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1.0];
+    
+    [self addShadowForView:self.buttonContainerView];
+    [self addShadowForView:self.labelContainerView];
+    self.photoImageView.layer.masksToBounds = YES;
+    
+}
+
+-(void)addShadowForView:(UIView *)view{
+    view.layer.masksToBounds = NO;
+    view.layer.cornerRadius = 4;
+    view.layer.shadowRadius = 1;
+    view.layer.shadowOffset = CGSizeMake(0,1);
+    view.layer.shadowOpacity = 0.25;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    
     
     //[TestUser saveTestUserToParse];
+    
+    self.photoImageView.image = nil;
+    self.firstNameLabel.text = nil;
+    self.ageLabel.text = nil;
+    
     
     self.likeButton.enabled = NO;
     self.dislikeButton.enabled = NO;
@@ -56,14 +102,24 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error){
             self.photos = objects;
-            [self queryForCurrentPhotoIndex];
-            [self updateView];
+            
+            
+            if([self allowPhoto]==NO){
+                [self setupNextPhoto];
+            }
+            else {
+                
+                [self queryForCurrentPhotoIndex];
+                [self updateView];
+            }
+            
+            
+            
         }
         else {
             NSLog(@"ERROR: %@", error);
         }
     }];
-    
     
 }
 
@@ -88,17 +144,18 @@
     [self checkLike];
 }
 
-- (IBAction)settingsButtonPressed:(id)sender {
+-(void)settingsButtonPressed{
+    [self performSegueWithIdentifier:@"showSettings" sender:nil];
 }
 
 
 
 -(void)chatButtonPressed{
-    NSLog(@"OK");
+    [self performSegueWithIdentifier:@"showMatches" sender:nil];
 }
 
 
-#pragma mark - Helper Methods
+#pragma mark - Helper Method - Photo handling
 
 -(void)queryForCurrentPhotoIndex{
     if ([self.photos count] > 0) {
@@ -160,18 +217,61 @@
 -(void)updateView{
     self.firstNameLabel.text = self.photo[@"user"][@"profile"][@"firstName"];
     self.ageLabel.text = [NSString stringWithFormat:@"%@",self.photo[@"user"][@"profile"][@"age"]];
-    self.tagLineLabel.text = self.photo[@"user"][@"profile"][@"tagLine"];
+    
 }
 
 -(void)setupNextPhoto{
     if (self.currentPhotoIndex + 1 < self.photos.count){
         self.currentPhotoIndex ++;
-        [self queryForCurrentPhotoIndex];
-    } else {
+        if ([self allowPhoto] == NO){
+            [self setupNextPhoto];
+        }
+        else {
+            [self queryForCurrentPhotoIndex];
+        }
+    }
+    else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No More Users to View" message:@"Check Back Later for more people!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
 }
+
+-(BOOL)allowPhoto{
+    NSInteger maxAge = [[NSUserDefaults standardUserDefaults] integerForKey:kAgeMaxKey];
+    BOOL men = [[NSUserDefaults standardUserDefaults] boolForKey:kMenEnableKey];
+    BOOL women = [[NSUserDefaults standardUserDefaults] boolForKey:kWomenEnabledKey];
+    BOOL single = [[NSUserDefaults standardUserDefaults] boolForKey:kSingleEnabledKey];
+    
+    PFObject *photo = self.photos[self.currentPhotoIndex];
+    PFUser *user = photo[kPhotoUserKey];
+    
+    int userAge = [user[kUserProfileKey][kUserProfileAgeKey] intValue];
+    NSString *gender = user[kUserProfileKey][kUserProfileGenderKey];
+    NSString *relationshipStatus = user[kUserProfileKey][kUserProfileRelationshipStatusKey];
+    
+    if (userAge > maxAge){
+        
+        return NO;
+    }
+    else if (men == NO && [gender isEqualToString:@"male"]){
+        
+        return NO;
+    }
+    else if (women == NO && [gender isEqualToString:@"female"]){
+        
+        return NO;
+    }
+    else if (single == NO && ([relationshipStatus isEqualToString:@"single"])){
+        
+        return NO;
+    }
+    else {
+        
+        return YES;
+    }
+}
+
+#pragma mark - Helper Methods - Likes Handling
 
 -(void)saveLike{
     PFObject *likeActivity = [PFObject objectWithClassName:@"Activity"];
@@ -249,6 +349,8 @@
     }];
 }
 
+#pragma mark - Helper Methods - Chat Room Handling
+
 -(void)createChatRoom{
     PFQuery *queryForChatRoom = [PFQuery queryWithClassName:@"ChatRoom"];
     [queryForChatRoom whereKey:@"user1" equalTo:[PFUser currentUser]];
@@ -267,7 +369,14 @@
                 [chatroom setObject:self.photo[kPhotoUserKey] forKey:@"user2"];
                 [chatroom saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (!error){
-                        [self performSegueWithIdentifier:@"showMatch" sender:nil];
+                        UIStoryboard *myStoryboard = self.storyboard;
+                        MatchViewController *matchViewController = [myStoryboard instantiateViewControllerWithIdentifier:@"matchVC"];
+                        matchViewController.view.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:.75];
+                        matchViewController.transitioningDelegate = self;
+                        matchViewController.matchedUserImage = self.photoImageView.image;
+                        matchViewController.delegate = self;
+                        matchViewController.modalPresentationStyle = UIModalPresentationCustom;
+                        [self presentViewController:matchViewController animated:YES completion:nil];
                     }
                 }];
             }
@@ -286,12 +395,13 @@
     if ([segue.identifier isEqualToString:@"showInfo"]){
         InfoViewController *infoVC = segue.destinationViewController;
         infoVC.photo = self.photo;
+        infoVC.delegate = self;
     }
-    else if ([segue.identifier isEqualToString:@"showMatch"]){
-        MatchViewController *matchVC = segue.destinationViewController;
-        matchVC.matchedUserImage = self.photoImageView.image;
-        matchVC.delegate = self;
-    }
+//    else if ([segue.identifier isEqualToString:@"showMatch"]){
+//        MatchViewController *matchVC = segue.destinationViewController;
+//        matchVC.matchedUserImage = self.photoImageView.image;
+//        matchVC.delegate = self;
+//    }
 }
 
 #pragma mark - MatchViewControllerDelegate
@@ -301,6 +411,33 @@
         [self performSegueWithIdentifier:@"showMatches" sender:nil];
     }];
 }
+
+#pragma mark - InfoViewControllerDelegate
+
+-(void)didPressLike{
+    [self.navigationController popViewControllerAnimated:NO];
+    [self checkLike];
+}
+
+-(void)didPressDislike{
+    [self.navigationController popViewControllerAnimated:NO];
+    [self checkDislike];
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    TransitionAnimator *animator = [[TransitionAnimator alloc]init];
+    animator.presenting = YES;
+    return animator;
+}
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    TransitionAnimator *animator = [[TransitionAnimator alloc]init];
+    return animator;
+}
+    
+
 
 
 @end

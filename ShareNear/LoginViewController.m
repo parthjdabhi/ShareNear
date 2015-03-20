@@ -7,11 +7,17 @@
 //
 
 #import "LoginViewController.h"
+#import "SignUpViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UITextFieldDelegate, UIPopoverPresentationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) NSMutableData *imageData;
+
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+
 
 @end
 
@@ -28,7 +34,11 @@
     animated = NO;
         if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]){
             [self updateUserInformation];
-            [self performSegueWithIdentifier:@"LoginToTab" sender:self];
+            
+            [self saveUserToInstallation];
+            
+            [self performSegueWithIdentifier:@"LoginToTab"
+                                      sender:self];
         }
 }
 
@@ -37,18 +47,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma - IBActions
+#pragma mark - IBActions
 
 - (IBAction)loginWithFacebookButton:(UIButton *)sender {
     
     self.activityIndicator.hidden = NO;
     [_activityIndicator startAnimating];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     
-    NSArray *permissions = @[ @"user_about_me", @"user_interests",@"user_relationships", @"user_birthday", @"user_location", @"user_relationship_details"];
+    NSArray *permissions = @[ @"user_about_me", @"user_interests",@"user_relationships", @"user_birthday", @"user_location", @"user_relationship_details", @"user_friends", @"publish_actions", @"read_stream"];
     
     [PFFacebookUtils logInWithPermissions:permissions block:^(PFUser *user, NSError *error) {
         [_activityIndicator stopAnimating];
         _activityIndicator.hidden = YES;
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
         
         if (!user) {
             NSString *errorMessage = nil;
@@ -70,15 +82,84 @@
         } else if (user.isNew) {
             NSLog(@"User signed up and logged in through Facebook!");
             [self updateUserInformation];
+            [self saveUserToInstallation];
             [self performSegueWithIdentifier:@"LoginToTab" sender:self];
         } else {
             NSLog(@"User logged in through Facebook!");
             [self updateUserInformation];
+            [self saveUserToInstallation];
             [self performSegueWithIdentifier:@"LoginToTab" sender:self];
         }
     }];
     
 }
+
+- (IBAction)signUpButtonPressed:(UIButton *)sender {
+    
+    NSLog(@"Forward to sign up page");
+    
+    SignUpViewController *popvc = [self.storyboard instantiateViewControllerWithIdentifier:@"signupVC"];
+    popvc.modalPresentationStyle = UIModalPresentationPopover;
+    UIPopoverPresentationController *popoverController = popvc.popoverPresentationController;
+    popoverController.delegate = self;
+    popoverController.sourceView = sender;
+    popoverController.sourceRect = sender.bounds;
+    popoverController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+    [self presentViewController:popvc animated:YES completion:^{
+        NSLog(@"yes sir");
+    }];
+}
+
+- (IBAction)loginButtonPressed:(id)sender {
+    NSLog(@"Login button pressed");
+    
+    self.activityIndicator.hidden = NO;
+    [_activityIndicator startAnimating];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    
+    [PFUser logInWithUsernameInBackground:_usernameTextField.text  password:_passwordTextField.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        
+                                        [_activityIndicator stopAnimating];
+                                        _activityIndicator.hidden = YES;
+                                        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+                                        
+                                        if (user) {
+                                            // Do stuff after successful login.
+                                            NSLog(@"Successfully logged in using ShareNear account!");
+                                            [self saveUserToInstallation];
+                                            [self performSegueWithIdentifier:@"LoginToTab" sender:self];
+                                        } else {
+                                            // The login failed. Check error to see why.
+                                            if (error){
+                                                NSLog(@"Loggin failed with error: %@", error.description);
+                                            } else{
+                                                NSLog(@"loggin failed without error info.");
+                                            }
+                                        }
+                                    }];
+    
+}
+
+/*- (IBAction)popWindow:(UIView*) sender {
+    UIStoryboard *myStoryboard = self.storyboard;
+    SignUpViewController *signUpViewController = [myStoryboard instantiateViewControllerWithIdentifier:@"signupVC"];
+    signUpViewController.modalPresentationStyle = UIModalPresentationPopover;
+    signUpViewController.preferredContentSize = CGSizeMake(320, 320);
+    
+    UIPopoverPresentationController *popoverController = [signUpViewController popoverPresentationController];
+    
+    popoverController.delegate = self;
+    popoverController.sourceView = self.view;
+    popoverController.sourceRect = CGRectMake(100, 100, 0, 0);
+    popoverController.permittedArrowDirections = UIPopoverArrowDirectionDown;
+    
+    
+    [self presentViewController:signUpViewController animated:YES completion:^{
+        NSLog(@"successfully popover some shit!");
+    }];
+    
+}*/
 
 #pragma mark - Helper Method
 
@@ -90,6 +171,8 @@
    //     NSLog(@"RESULT:\n%@", result);
         
         if (!error){
+    //        NSLog(@"Result: \n%@", result);
+            
             NSDictionary *userDictionary = (NSDictionary *)result;
             // create URL
             NSString *facebookID = userDictionary[@"id"];
@@ -129,6 +212,12 @@
             if (userDictionary[@"relationship_status"]){
                 userProfile[kUserProfileRelationshipStatusKey] = userDictionary[@"relationship_status"];
             }
+            if (userDictionary[@"public_actions"]){
+                userProfile[kUserProfilePublishActionsKey] = userDictionary[@"publish_actions"];
+            }
+            if (userDictionary[@"read_stream"]){
+                userProfile[@"readStream"] = userDictionary[@"read_stream"];
+            }
             
             
             
@@ -136,6 +225,13 @@
             [[PFUser currentUser] saveInBackground];
             
             [self requestImage];
+            
+            
+            // request Facebook Friend List
+            [self requestFacebookFriendList];
+            
+            
+            
         }
         else {
             NSLog(@"ERROR in Facebook request: %@", error);
@@ -189,6 +285,18 @@
     }];
 }
 
+-(void)requestFacebookFriendList{
+    FBRequest *friendListRequest = [FBRequest requestForMyFriends];
+    [friendListRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error){
+      //      NSLog(@"friend request result: \n%@", result[@"data"]);
+            
+            
+            
+        }
+    }];
+}
+
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
     [self.imageData appendData:data];
 }
@@ -198,9 +306,39 @@
     [self uploadPFFileToParse:profileImage];
 }
 
-//- (void)_presentUserDetailsViewControllerAnimated:(BOOL)animated {
-//    UserDetailsViewController *detailsViewController = [[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped];
-//    [self.navigationController pushViewController:detailsViewController animated:animated];
+-(void)saveUserToInstallation{
+    [[PFInstallation currentInstallation] setObject:[PFUser currentUser]
+                                             forKey:@"user"];
+    [[PFInstallation currentInstallation] saveEventually:^(BOOL succeeded, NSError *error) {
+        if (succeeded){
+      //      NSLog(@"Successfully save user to installation");
+        }
+    }];
+}
+
+#pragma mark - Keyboard Releasing
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
+#pragma mark - UITextFeildDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return NO;
+}
+
+#pragma mark - UIPopoverPresentationControllerDelegate
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller{
+    return UIModalPresentationOverFullScreen;
+}
+
+
+
+//- (UIViewController *)presentationController:(UIPresentationController *)controller viewControllerForAdaptivePresentationStyle:(UIModalPresentationStyle)style{
+//    
 //}
 
 

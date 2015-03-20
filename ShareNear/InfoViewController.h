@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol InfoViewControllerDelegate <NSObject>
+
+-(void)didPressLike;
+-(void)didPressDislike;
+
+@end
+
 @interface InfoViewController : UIViewController
 
-@property (strong, nonatomic) PFObject *photo; 
+@property (strong, nonatomic) PFObject *photo;
+
+@property (weak) id <InfoViewControllerDelegate> delegate;
 
 @end

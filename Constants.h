@@ -10,6 +10,11 @@
 
 @interface Constants : NSObject
 
+#pragma mark - Global Key
+
+extern NSString *const kObjectIdKey;
+extern NSString *const kCreatedAtKey;
+
 #pragma mark - User Class
 
 extern NSString *const kUserProfileKey;
@@ -23,6 +28,8 @@ extern NSString *const kUserProfilePictureURL;
 extern NSString *const kUserProfileRelationshipStatusKey;
 extern NSString *const kUserProfileAgeKey;
 extern NSString *const kUserTagLineKey;
+extern NSString *const kUserProfileFriendsKey;
+extern NSString *const kUserProfilePublishActionsKey;
 
 #pragma mark - Photo Class
 
@@ -47,6 +54,49 @@ extern NSString *const kWomenEnabledKey;
 extern NSString *const kSingleEnabledKey;
 extern NSString *const kAgeMaxKey;
 
+#pragma mark - ChatRoom
+
+extern NSString *const kChatRoomClassKey;
+extern NSString *const kChatRoomUser1Key;
+extern NSString *const kChatRoomUser2Key;
+
+#pragma mark - Chat
+
+extern NSString *const kChatClassKey;
+extern NSString *const kChatChatRoomKey;
+extern NSString *const kChatFromUserKey;
+extern NSString *const kChatToUserKey;
+extern NSString *const kChatTextKey;
+extern NSString *const kChatImageKey;
+
+#pragma mark - Installation
+
+extern NSString *const kInstallationUserKey;
+
+#pragma mark - Followers
+
+extern NSString *const kFollowersClassKey;
+extern NSString *const kFollowersFollowerKey;
+extern NSString *const kFollowersFollowingKey;
+
+
 
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

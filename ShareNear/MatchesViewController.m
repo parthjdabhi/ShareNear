@@ -21,6 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.title = @"Matches!";
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -91,7 +93,8 @@
     
     cell.textLabel.text = likedUser[@"profile"][@"firstName"];
     
-    // cell.imageView.image = place holder image
+    // place holder image
+    cell.imageView.image = [UIImage imageNamed:@"avatar.png"];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     PFQuery *queryForPhoto = [[PFQuery alloc] initWithClassName:@"Photo"];
@@ -118,22 +121,29 @@
 #pragma mark - UITableViewDelegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ChatViewController *chatVC = [[ChatViewController alloc] init];
     
-    chatVC.chatRoom = _availableChatRooms[indexPath.row];
-    
-    [self.navigationController pushViewController:chatVC animated:YES];
+    [self performSegueWithIdentifier:@"showChat" sender:indexPath];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 55.0;
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    ChatViewController *chatVC = segue.destinationViewController;
+    
+    NSIndexPath *indexPath = sender;
+    
+    chatVC.chatRoom = [self.availableChatRooms objectAtIndex:indexPath.row];
 }
-*/
+
 
 @end

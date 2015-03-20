@@ -18,9 +18,7 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "Constants.h"
-//#import <CoreData/CoreData.h>
-//#import "AppDelegate.h"
-#import <JSQMessagesViewController/JSQMessage.h>
+#import <JSQMessagesViewController/JSQMessages.h>
 
 #endif
 

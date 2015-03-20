@@ -10,6 +10,11 @@
 
 @implementation Constants
 
+#pragma mark - Global Key
+
+NSString *const kObjectIdKey                        = @"objectId";
+NSString *const kCreatedAtKey                       = @"createdAt";
+
 #pragma mark - user class
 
 NSString *const kUserProfileKey                     = @"profile";
@@ -23,6 +28,8 @@ NSString *const kUserProfilePictureURL              = @"pictureURL";
 NSString *const kUserProfileRelationshipStatusKey   = @"relationshipStatus";
 NSString *const kUserProfileAgeKey                  = @"age";
 NSString *const kUserTagLineKey                     = @"tagLine";
+NSString *const kUserProfileFriendsKey              = @"userFriends";
+NSString *const kUserProfilePublishActionsKey        = @"publishActions";
 
 #pragma mark - photo class
 
@@ -42,10 +49,47 @@ NSString *const kActivityTypeDislikeKey             = @"dislike";
 
 #pragma mark - Settings
 
-NSString *const kMenEnableKey                       = @"mem";
+NSString *const kMenEnableKey                       = @"men";
 NSString *const kWomenEnabledKey                    = @"women";
 NSString *const kSingleEnabledKey                   = @"single";
 NSString *const kAgeMaxKey                          = @"ageMax";
+
+#pragma mark - ChatRoom
+
+NSString *const kChatRoomClassKey                   = @"ChatRoom";
+NSString *const kChatRoomUser1Key                   = @"user1";
+NSString *const kChatRoomUser2Key                   = @"user2";
+
+#pragma mark - Chat
+
+NSString *const kChatClassKey                       = @"Chat";
+NSString *const kChatChatRoomKey                    = @"chatroom";
+NSString *const kChatFromUserKey                    = @"fromUser";
+NSString *const kChatToUserKey                      = @"toUser";
+NSString *const kChatTextKey                        = @"text";
+NSString *const kChatImageKey                       = @"image";
+
+#pragma mark - Installation
+
+NSString *const kInstallationUserKey                = @"user";
+
+#pragma mark - Followers
+
+NSString *const kFollowersClassKey                  = @"Followers";
+NSString *const kFollowersFollowerKey               = @"follower";
+NSString *const kFollowersFollowingKey              = @"following";
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

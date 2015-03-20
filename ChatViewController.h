@@ -7,11 +7,17 @@
 //
 
 #import "JSQMessagesViewController.h"
-#import <JSQSystemSoundPlayer/JSQSystemSoundPlayer.h>
 
+@protocol ChatViewControllerDelegate;
 
 @interface ChatViewController : JSQMessagesViewController <JSQMessagesCollectionViewDataSource, JSQMessagesCollectionViewCellDelegate>
 
 @property (strong, nonatomic) PFObject *chatRoom;
+@property (strong, nonatomic) PFUser *withUser;
+
+@end
+
+@protocol ChatViewControllerDelegate <NSObject>
+
 
 @end
