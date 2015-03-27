@@ -77,6 +77,9 @@
 		F47BF3621A857A7A00EB6FEA /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF3611A857A7A00EB6FEA /* MatchViewController.m */; };
 		F47BF3651A857D1700EB6FEA /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF3641A857D1700EB6FEA /* MatchesViewController.m */; };
 		F47BF36B1A8580FB00EB6FEA /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF36A1A8580FB00EB6FEA /* ChatViewController.m */; };
+		F4F459D41AC604C80092F9A9 /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F459D31AC604C80092F9A9 /* RGCardViewLayout.m */; };
+		F4F459D81AC605170092F9A9 /* DiscoverPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F459D71AC605170092F9A9 /* DiscoverPeopleViewController.m */; };
+		F4F459DB1AC606E50092F9A9 /* DiscoverPeopleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F459DA1AC606E50092F9A9 /* DiscoverPeopleCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +199,12 @@
 		F47BF3641A857D1700EB6FEA /* MatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchesViewController.m; sourceTree = "<group>"; };
 		F47BF3691A8580FB00EB6FEA /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		F47BF36A1A8580FB00EB6FEA /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		F4F459D21AC604C80092F9A9 /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
+		F4F459D31AC604C80092F9A9 /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
+		F4F459D61AC605170092F9A9 /* DiscoverPeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverPeopleViewController.h; sourceTree = "<group>"; };
+		F4F459D71AC605170092F9A9 /* DiscoverPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverPeopleViewController.m; sourceTree = "<group>"; };
+		F4F459D91AC606E50092F9A9 /* DiscoverPeopleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverPeopleCollectionViewCell.h; sourceTree = "<group>"; };
+		F4F459DA1AC606E50092F9A9 /* DiscoverPeopleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverPeopleCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,6 +408,7 @@
 			children = (
 				F45784C51A82750C00EE6B13 /* DiscoverViewController.h */,
 				F45784C61A82750C00EE6B13 /* DiscoverViewController.m */,
+				F4F459D51AC604DB0092F9A9 /* People */,
 				F47BF35F1A852A6F00EB6FEA /* MatchUp */,
 			);
 			name = Discover;
@@ -586,6 +596,7 @@
 		F46D7F491AA0D8DC00908234 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F4F459D11AC604AD0092F9A9 /* RGCardViewLayout */,
 				F45784C91A82BEEF00EE6B13 /* UIButtonBootstrap */,
 				F45784AC1A81E6D900EE6B13 /* RAMAnimatedTabBarController */,
 				F46D7F421AA0D8BE00908234 /* AFMMRecordResponseSerializer */,
@@ -665,6 +676,26 @@
 				F45EBEB21A8873D400A6BAC0 /* Settings */,
 			);
 			name = MatchUp;
+			sourceTree = "<group>";
+		};
+		F4F459D11AC604AD0092F9A9 /* RGCardViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F4F459D21AC604C80092F9A9 /* RGCardViewLayout.h */,
+				F4F459D31AC604C80092F9A9 /* RGCardViewLayout.m */,
+			);
+			name = RGCardViewLayout;
+			sourceTree = "<group>";
+		};
+		F4F459D51AC604DB0092F9A9 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				F4F459D61AC605170092F9A9 /* DiscoverPeopleViewController.h */,
+				F4F459D71AC605170092F9A9 /* DiscoverPeopleViewController.m */,
+				F4F459D91AC606E50092F9A9 /* DiscoverPeopleCollectionViewCell.h */,
+				F4F459DA1AC606E50092F9A9 /* DiscoverPeopleCollectionViewCell.m */,
+			);
+			name = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -822,10 +853,12 @@
 				F46D7F471AA0D8BE00908234 /* AFMMRecordResponseSerializationMapper.m in Sources */,
 				F457850D1A840EA500EE6B13 /* Constants.m in Sources */,
 				F45784BF1A81E6D900EE6B13 /* RAMAnimatedTabBarController.swift in Sources */,
+				F4F459DB1AC606E50092F9A9 /* DiscoverPeopleCollectionViewCell.m in Sources */,
 				F46D7F0F1A8F2F3E00908234 /* P2PShareViewController.m in Sources */,
 				F45784831A81AF8000EE6B13 /* main.m in Sources */,
 				F45784BE1A81E6D900EE6B13 /* RAMTransitionItemAnimation.swift in Sources */,
 				F45EBEAD1A86B60500A6BAC0 /* ChatTabViewController.m in Sources */,
+				F4F459D41AC604C80092F9A9 /* RGCardViewLayout.m in Sources */,
 				F46D7F171A90165C00908234 /* ShareFacebookViewController.m in Sources */,
 				F47BF34E1A848EA400EB6FEA /* MatchUpViewController.m in Sources */,
 				F46D7F481AA0D8BE00908234 /* AFMMRecordResponseSerializer.m in Sources */,
@@ -849,6 +882,7 @@
 				F46D7F371A98710000908234 /* MyWorldTravelerModel.xcdatamodeld in Sources */,
 				F47BF36B1A8580FB00EB6FEA /* ChatViewController.m in Sources */,
 				F45784D51A82C0F500EE6B13 /* HomeViewController.m in Sources */,
+				F4F459D81AC605170092F9A9 /* DiscoverPeopleViewController.m in Sources */,
 				F46D7F501AA0DBCD00908234 /* MapViewController.m in Sources */,
 				F45784BA1A81E6D900EE6B13 /* RAMBounceAnimation.swift in Sources */,
 				F46D7F411A9927C200908234 /* ContactTableViewCell.m in Sources */,
