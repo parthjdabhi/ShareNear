@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-ShareNear-AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-ShareNear-JSQMessagesViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,16 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ShareNear-MMRecord.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ShareNear-MagicalRecord.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-ShareNear.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3215CE6E8364EA49388137B2</key>
+		<key>0CDFEE5C8AA70EB855EBBB89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35A3DACD8F9F0C262BBF825A</key>
+		<key>18EE84C8113577B2A58C8F15</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7FBE880A488AF616F399BA98</key>
+		<key>9048CB370E57BB161E2B13EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F194FB2B68FB3BB99EA0273</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B1710F5079727DFF9FCBA032</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0C218267C3188376D1853BC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D10AA368B815FAEC285CB9C2</key>
+		<key>DDAC4D90AF7EF8B6EB6AC313</key>
 		<dict>
 			<key>primary</key>
 			<true/>

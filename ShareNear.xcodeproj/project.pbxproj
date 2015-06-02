@@ -24,9 +24,6 @@
 		F45784C01A81E6D900EE6B13 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45784B91A81E6D900EE6B13 /* RAMItemAnimationProtocol.swift */; };
 		F45784C31A81EBDE00EE6B13 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784C21A81EBDE00EE6B13 /* LoginViewController.m */; };
 		F45784C71A82750C00EE6B13 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784C61A82750C00EE6B13 /* DiscoverViewController.m */; };
-		F45784CF1A82BF3700EE6B13 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F45784CA1A82BF3700EE6B13 /* FontAwesome.ttf */; };
-		F45784D01A82BF3700EE6B13 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784CC1A82BF3700EE6B13 /* NSString+FontAwesome.m */; };
-		F45784D11A82BF3700EE6B13 /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784CE1A82BF3700EE6B13 /* UIButton+Bootstrap.m */; };
 		F45784D51A82C0F500EE6B13 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45784D41A82C0F500EE6B13 /* HomeViewController.m */; };
 		F45784D81A82CA9D00EE6B13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784D71A82CA9D00EE6B13 /* CoreGraphics.framework */; };
 		F45784DB1A82CAEF00EE6B13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45784DA1A82CAEF00EE6B13 /* Foundation.framework */; };
@@ -63,8 +60,6 @@
 		F46D7F391A98711700908234 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46D7F381A98711700908234 /* CoreData.framework */; };
 		F46D7F3D1A99274A00908234 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46D7F3C1A99274A00908234 /* ContactsViewController.m */; };
 		F46D7F411A9927C200908234 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46D7F401A9927C200908234 /* ContactTableViewCell.m */; };
-		F46D7F471AA0D8BE00908234 /* AFMMRecordResponseSerializationMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F46D7F441AA0D8BE00908234 /* AFMMRecordResponseSerializationMapper.m */; };
-		F46D7F481AA0D8BE00908234 /* AFMMRecordResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F46D7F461AA0D8BE00908234 /* AFMMRecordResponseSerializer.m */; };
 		F46D7F501AA0DBCD00908234 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46D7F4F1AA0DBCD00908234 /* MapViewController.m */; };
 		F46D7F541AA2340900908234 /* circle-loading-animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = F46D7F531AA2340900908234 /* circle-loading-animation.gif */; };
 		F47BF34B1A848CC800EB6FEA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47BF34A1A848CC800EB6FEA /* SettingsViewController.m */; };
@@ -120,11 +115,6 @@
 		F45784C21A81EBDE00EE6B13 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F45784C51A82750C00EE6B13 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		F45784C61A82750C00EE6B13 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
-		F45784CA1A82BF3700EE6B13 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		F45784CB1A82BF3700EE6B13 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
-		F45784CC1A82BF3700EE6B13 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
-		F45784CD1A82BF3700EE6B13 /* UIButton+Bootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Bootstrap.h"; sourceTree = "<group>"; };
-		F45784CE1A82BF3700EE6B13 /* UIButton+Bootstrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Bootstrap.m"; sourceTree = "<group>"; };
 		F45784D31A82C0F500EE6B13 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		F45784D41A82C0F500EE6B13 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		F45784D71A82CA9D00EE6B13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,10 +164,6 @@
 		F46D7F3C1A99274A00908234 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		F46D7F3F1A9927C200908234 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
 		F46D7F401A9927C200908234 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
-		F46D7F431AA0D8BE00908234 /* AFMMRecordResponseSerializationMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializationMapper.h; sourceTree = "<group>"; };
-		F46D7F441AA0D8BE00908234 /* AFMMRecordResponseSerializationMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializationMapper.m; sourceTree = "<group>"; };
-		F46D7F451AA0D8BE00908234 /* AFMMRecordResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializer.h; sourceTree = "<group>"; };
-		F46D7F461AA0D8BE00908234 /* AFMMRecordResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializer.m; sourceTree = "<group>"; };
 		F46D7F4E1AA0DBCD00908234 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		F46D7F4F1AA0DBCD00908234 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		F46D7F531AA2340900908234 /* circle-loading-animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "circle-loading-animation.gif"; sourceTree = "<group>"; };
@@ -414,19 +400,6 @@
 			name = Discover;
 			sourceTree = "<group>";
 		};
-		F45784C91A82BEEF00EE6B13 /* UIButtonBootstrap */ = {
-			isa = PBXGroup;
-			children = (
-				F45784CA1A82BF3700EE6B13 /* FontAwesome.ttf */,
-				F45784CB1A82BF3700EE6B13 /* NSString+FontAwesome.h */,
-				F45784CC1A82BF3700EE6B13 /* NSString+FontAwesome.m */,
-				F45784CD1A82BF3700EE6B13 /* UIButton+Bootstrap.h */,
-				F45784CE1A82BF3700EE6B13 /* UIButton+Bootstrap.m */,
-			);
-			name = UIButtonBootstrap;
-			path = ShareNear;
-			sourceTree = "<group>";
-		};
 		F45784D61A82C0FB00EE6B13 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,24 +555,11 @@
 			name = Contacts;
 			sourceTree = "<group>";
 		};
-		F46D7F421AA0D8BE00908234 /* AFMMRecordResponseSerializer */ = {
-			isa = PBXGroup;
-			children = (
-				F46D7F431AA0D8BE00908234 /* AFMMRecordResponseSerializationMapper.h */,
-				F46D7F441AA0D8BE00908234 /* AFMMRecordResponseSerializationMapper.m */,
-				F46D7F451AA0D8BE00908234 /* AFMMRecordResponseSerializer.h */,
-				F46D7F461AA0D8BE00908234 /* AFMMRecordResponseSerializer.m */,
-			);
-			path = AFMMRecordResponseSerializer;
-			sourceTree = "<group>";
-		};
 		F46D7F491AA0D8DC00908234 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
 				F4F459D11AC604AD0092F9A9 /* RGCardViewLayout */,
-				F45784C91A82BEEF00EE6B13 /* UIButtonBootstrap */,
 				F45784AC1A81E6D900EE6B13 /* RAMAnimatedTabBarController */,
-				F46D7F421AA0D8BE00908234 /* AFMMRecordResponseSerializer */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -792,7 +752,6 @@
 				F47BF35C1A85224000EB6FEA /* bonobo-congo-ziegler_68751_990x742.jpg in Resources */,
 				F45784911A81AF8000EE6B13 /* Images.xcassets in Resources */,
 				F45EBEB11A886ADB00A6BAC0 /* defaultPrefsFile.plist in Resources */,
-				F45784CF1A82BF3700EE6B13 /* FontAwesome.ttf in Resources */,
 				F47BF35E1A85237E00EB6FEA /* picture-wallpaper.jpg in Resources */,
 				F46D7F541AA2340900908234 /* circle-loading-animation.gif in Resources */,
 			);
@@ -849,8 +808,6 @@
 				F46D7F0B1A8B2FC600908234 /* TransitionAnimator.m in Sources */,
 				F45784C71A82750C00EE6B13 /* DiscoverViewController.m in Sources */,
 				F47BF3541A85066600EB6FEA /* InfoViewController.m in Sources */,
-				F45784D11A82BF3700EE6B13 /* UIButton+Bootstrap.m in Sources */,
-				F46D7F471AA0D8BE00908234 /* AFMMRecordResponseSerializationMapper.m in Sources */,
 				F457850D1A840EA500EE6B13 /* Constants.m in Sources */,
 				F45784BF1A81E6D900EE6B13 /* RAMAnimatedTabBarController.swift in Sources */,
 				F4F459DB1AC606E50092F9A9 /* DiscoverPeopleCollectionViewCell.m in Sources */,
@@ -861,10 +818,8 @@
 				F4F459D41AC604C80092F9A9 /* RGCardViewLayout.m in Sources */,
 				F46D7F171A90165C00908234 /* ShareFacebookViewController.m in Sources */,
 				F47BF34E1A848EA400EB6FEA /* MatchUpViewController.m in Sources */,
-				F46D7F481AA0D8BE00908234 /* AFMMRecordResponseSerializer.m in Sources */,
 				F45784C01A81E6D900EE6B13 /* RAMItemAnimationProtocol.swift in Sources */,
 				F47BF3511A84957D00EB6FEA /* MatchUpSettingsViewController.m in Sources */,
-				F45784D01A82BF3700EE6B13 /* NSString+FontAwesome.m in Sources */,
 				F45785101A843F0100EE6B13 /* ProfileViewController.m in Sources */,
 				F47BF34B1A848CC800EB6FEA /* SettingsViewController.m in Sources */,
 				F45784891A81AF8000EE6B13 /* ShareNear.xcdatamodeld in Sources */,

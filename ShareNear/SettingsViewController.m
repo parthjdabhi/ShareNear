@@ -26,6 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBActions
+- (IBAction)logout:(UIButton *)sender {
+    [PFUser logOut];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+
 /*
 #pragma mark - Navigation
 

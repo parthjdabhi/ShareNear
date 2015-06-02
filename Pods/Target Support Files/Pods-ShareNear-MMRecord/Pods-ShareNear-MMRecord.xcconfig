@@ -1,1 +1,0 @@
-PODS_SHARENEAR_MMRECORD_OTHER_LDFLAGS = -framework "CoreData"

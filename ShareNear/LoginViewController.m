@@ -98,16 +98,6 @@
     
     NSLog(@"Forward to sign up page");
     
-    SignUpViewController *popvc = [self.storyboard instantiateViewControllerWithIdentifier:@"signupVC"];
-    popvc.modalPresentationStyle = UIModalPresentationPopover;
-    UIPopoverPresentationController *popoverController = popvc.popoverPresentationController;
-    popoverController.delegate = self;
-    popoverController.sourceView = sender;
-    popoverController.sourceRect = sender.bounds;
-    popoverController.permittedArrowDirections = UIPopoverArrowDirectionAny;
-    [self presentViewController:popvc animated:YES completion:^{
-        NSLog(@"yes sir");
-    }];
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
@@ -141,25 +131,7 @@
     
 }
 
-/*- (IBAction)popWindow:(UIView*) sender {
-    UIStoryboard *myStoryboard = self.storyboard;
-    SignUpViewController *signUpViewController = [myStoryboard instantiateViewControllerWithIdentifier:@"signupVC"];
-    signUpViewController.modalPresentationStyle = UIModalPresentationPopover;
-    signUpViewController.preferredContentSize = CGSizeMake(320, 320);
-    
-    UIPopoverPresentationController *popoverController = [signUpViewController popoverPresentationController];
-    
-    popoverController.delegate = self;
-    popoverController.sourceView = self.view;
-    popoverController.sourceRect = CGRectMake(100, 100, 0, 0);
-    popoverController.permittedArrowDirections = UIPopoverArrowDirectionDown;
-    
-    
-    [self presentViewController:signUpViewController animated:YES completion:^{
-        NSLog(@"successfully popover some shit!");
-    }];
-    
-}*/
+
 
 #pragma mark - Helper Method
 
@@ -329,17 +301,7 @@
     return NO;
 }
 
-#pragma mark - UIPopoverPresentationControllerDelegate
 
-- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller{
-    return UIModalPresentationOverFullScreen;
-}
-
-
-
-//- (UIViewController *)presentationController:(UIPresentationController *)controller viewControllerForAdaptivePresentationStyle:(UIModalPresentationStyle)style{
-//    
-//}
 
 
 /*
