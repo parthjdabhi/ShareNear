@@ -7,7 +7,6 @@
 //
 
 #import "HomeViewController.h"
-#import "UIButton+Bootstrap.h"
 
 @interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *shareOnFacebookButton;
@@ -24,9 +23,7 @@
     
     
     
-    // set buttons style
-    [_shareCameraButton primaryStyle];
-    [_shareCameraButton addAwesomeIcon:FAIconBookmark beforeTitle:NO];
+
 
 }
 
