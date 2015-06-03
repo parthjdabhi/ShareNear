@@ -30,10 +30,10 @@ $ cd ShareNear
 
 ### Todo's
 
-* Write Tests
-* Github saving overhaul
-* Code Commenting
-* Night Mode
+* Contact tab
+* Messenger tab
+* Explore tab
+* Me tab
 
 ###License
 This code is distributed under the terms and conditions of the [MIT license].
